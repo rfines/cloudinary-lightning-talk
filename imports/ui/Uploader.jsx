@@ -29,11 +29,11 @@ export default class Uploader extends Component {
     }
     render(){
         let dropTargetClasses = `text-center drop-target`;
-        let containerClasses = `col-md-12 jumbotron text-center`;
+        let containerClasses = `col-md-12 text-center`;
        return(
            <div className={containerClasses} >
                <div className={dropTargetClasses} >
-                   <input type="file" ref="cloudinaryFileInput" multiple onChange={this.upload.bind(this)} placeholder="Choose your file..." />
+                   <input type="file" ref="cloudinaryFileInput" multiple onChange={this.upload.bind(this)} placeholder="Choose your file..." style={{color: "#F05F40"}} />
 
                </div>
            </div>
