@@ -1,0 +1,6 @@
+node_modules/
+.meteor/local
+.idea/
+.DS_STORE
+settings.json
+npm-debug.log
