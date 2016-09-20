@@ -31,11 +31,27 @@ export default class Uploader extends Component {
       return ReactDOM.findDOMNode(this.refs.cloudinaryFileInput).value = "";
     }
   }
+  uploadFromUrl(){
+    const url = ReactDOM.findDOMNode(this.refs.cloudinaryUrlInput).value;
+    console.log(url);
+    if (url && url.length > 0) {
+      Meteor.call("uploadFromUrl", url);
+      return ReactDOM.findDOMNode(this.refs.cloudinaryUrlInput).value = "";
+    }
+  }
   render(){
     return(
       <div className="col-md-12 text-center" style={styles.dropTarget} >
         <div className="text-center drop-target" >
-          <input type="file" ref="cloudinaryFileInput" multiple onChange={this.upload.bind(this)} placeholder="Choose your file..." style={{color: "#F05F40"}} />
+          <div className="col-md-4 col-md-offset-2">
+              <input type="file" ref="cloudinaryFileInput" multiple onChange={this.upload.bind(this)} placeholder="Choose your file..." style={{color: "#F05F40"}} className="form-control" />
+          </div>
+          <div className="col-md-4">
+              <input type="text" ref="cloudinaryUrlInput" multiple placeholder="Enter the url to your image..." className="form-control" style={{color: "#F05F40"}} />
+              <br />
+              <button className="btn btn-success" style={{backgroundColor:"#F05F40", color:"white"}} onClick={this.uploadFromUrl.bind(this)}>Upload From Url</button>
+          </div>
+
         </div>
       </div>
     );

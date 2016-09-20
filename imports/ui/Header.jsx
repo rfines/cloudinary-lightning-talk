@@ -16,7 +16,7 @@ export default class Header extends React.Component {
                     <p style={{paddingLeft:"20px", paddingRight:"20px"}}>Full-stack developer, startup enthusiast, Chief Technical Officer at <a href="http://eventr.io" target="_blank">Eventr.io - We make tradeshows easier -</a>.
                     I am in no way affiliated with Cloudinary, just wanted to pass along an extremely useful tool.</p><br></br>
                     <p>This sample site was created using Meteor.js, React.js, Bootstrap, MongoDb, and of course <a href="http://cloudinary.com" target="_blank">Cloudinary</a>.
-                    I took this talk as an opportunity to try to improve my design skills as well as to get comfortable with React.</p>
+                    I took this talk as an opportunity to try get comfortable with ES6, the AirBnB Javascript Styleguide and React.</p>
                 </div>
             </div>
         </header>

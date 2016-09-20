@@ -56,6 +56,6 @@ class App extends Component {
 export default App = createContainer(({ }) => {
     SubsManagerUploads.subscribe('uploads');
     const uploads = Uploads.find().fetch();
-    console.log(uploads);
+    
     return {uploads:uploads};
 }, App);

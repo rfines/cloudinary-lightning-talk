@@ -30,41 +30,38 @@ export default class Portfolio extends Component {
     return { transform: transformArray[index], label: labelArray[index] };
   }
   render() {
-        let multiClassName = `row no-gutter popup-gallery`;
-        console.log(this.props.uploads)
-        if(!this.props.uploads || this.props.uploads.length === 0){
-            return (
-                <section className="no-padding" id="portfolio">
-                    <div className="container-fluid">
-                        <div className={multiClassName} style={{"minHeight":"400px"}}>
-                            <Uploader />
-                        </div>
-                    </div>
-                </section>
-            )
-        }else{
-
-            return (
-
-                <section className="no-padding" id="portfolio">
-                    <div className="container-fluid">
-                    <Uploader />
-                        <div className={multiClassName} style={{"minHeight":"400px"}}>
-                        {
-                            this.props.uploads.map(function(up){
-                              let index = _.random(0, transformArray.length);
-                              let transformObject = { transform: transformArray[index], label: labelArray[index] };
-                              return(
-                                <div key={up._id}>
-                                    <Upload upload={up} label={transformObject.label} transform={transformObject.transform}/>
-                                </div>
-                              )
-                            })
-                        }
-                        </div>
-                    </div>
-                </section>
-            );
-        }
+    let multiClassName = `row no-gutter popup-gallery`;
+    if(!this.props.uploads || this.props.uploads.length === 0){
+        return (
+          <section className="no-padding" id="portfolio">
+              <div className="container-fluid">
+                  <div className={multiClassName} style={{"minHeight":"400px"}}>
+                      <Uploader />
+                  </div>
+              </div>
+          </section>
+        );
+    }else{
+      return (
+        <section className="no-padding" id="portfolio">
+            <div className="container-fluid">
+            <Uploader />
+              <div className={multiClassName} style={{"minHeight":"400px"}}>
+                {
+                  this.props.uploads.map(function(up){
+                    let index = _.random(0, transformArray.length);
+                    let transformObject = { transform: transformArray[index], label: labelArray[index] };
+                    return(
+                      <div key={up._id}>
+                          <Upload upload={up} label={transformObject.label} transform={transformObject.transform}/>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </div>
+        </section>
+      );
     }
+  }
 }
