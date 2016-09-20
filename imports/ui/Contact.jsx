@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
                     <div className="col-lg-8 col-lg-offset-2 text-center">
                         <h2 className="section-heading">Let's Get In Touch!</h2>
                         <hr className="primary"></hr>
-                        <p>Have questions or want to discuss your next project? Get in touch with me!</p>
+                        <p>Have questions?</p>
                     </div>
                     <div className="col-lg-4 col-lg-offset-2 text-center">
                         <i className="fa fa-phone fa-3x sr-contact"></i>
@@ -26,17 +26,12 @@ export default class Contact extends React.Component {
                 </div>
                 <div className="row">
                     <div className="col-lg-8 col-lg-offset-2 text-center">
-
+                      <h2 className="section-heading">Looking for the code?</h2>
                         <hr className="primary"></hr>
-                        <p>Looking for side work or want to see the code?</p>
                     </div>
-                    <div className="col-lg-4 col-lg-offset-2 text-center">
+                    <div className="col-lg-4 col-lg-offset-4 text-center">
                         <i className="fa fa-github fa-3x sr-github"></i>
                         <p><a href="https://github.com/rfines/cloudinary-lightning-talk.git" target="_blank">https://github.com/rfines/cloudinary-lightning-talk.git</a></p>
-                    </div>
-                    <div className="col-lg-4 text-center">
-                        <i className="fa fa-envelope-o fa-3x sr-contact"></i>
-                        <p><a href="mailto:fines@eventr.io">fines@eventr.io</a></p>
                     </div>
                 </div>
             </div>
